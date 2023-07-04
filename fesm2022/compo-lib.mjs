@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { Injectable, Component, NgModule } from '@angular/core';
+import { Injectable, Component, NgModule, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 class CompoLibService {
     constructor() { }
@@ -15,11 +15,11 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.1.3", ngImpor
 
 class LoginFormComponent {
     static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.1.3", ngImport: i0, type: LoginFormComponent, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
-    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "16.1.3", type: LoginFormComponent, selector: "lib-login-form", ngImport: i0, template: "<h4>login form</h4>", styles: [""] }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "16.1.3", type: LoginFormComponent, selector: "lib-login-form", ngImport: i0, template: "<h4>login form source files</h4>", styles: [""] }); }
 }
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.1.3", ngImport: i0, type: LoginFormComponent, decorators: [{
             type: Component,
-            args: [{ selector: 'lib-login-form', template: "<h4>login form</h4>" }]
+            args: [{ selector: 'lib-login-form', template: "<h4>login form source files</h4>" }]
         }] });
 
 class CompoLibComponent {
@@ -35,6 +35,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.1.3", ngImpor
   ` }]
         }] });
 
+// import { LoginFormComponent } from './login-form/login-form.component'; 
 class CompoLibModule {
     static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.1.3", ngImport: i0, type: CompoLibModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
     static { this.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.1.3", ngImport: i0, type: CompoLibModule, declarations: [CompoLibComponent,
@@ -51,7 +52,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.1.3", ngImpor
                     imports: [],
                     exports: [
                         CompoLibComponent
-                    ]
+                    ],
+                    schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA],
                 }]
         }] });
 
