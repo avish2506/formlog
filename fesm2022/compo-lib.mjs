@@ -1,5 +1,7 @@
 import * as i0 from '@angular/core';
 import { Injectable, Component, NgModule, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import * as i1 from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 class CompoLibService {
     constructor() { }
@@ -14,12 +16,15 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.1.3", ngImpor
         }], ctorParameters: function () { return []; } });
 
 class LoginFormComponent {
+    getValues(val) {
+        console.log(val);
+    }
     static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.1.3", ngImport: i0, type: LoginFormComponent, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
-    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "16.1.3", type: LoginFormComponent, selector: "lib-login-form", ngImport: i0, template: "<h4>login form source files</h4>", styles: [""] }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "16.1.3", type: LoginFormComponent, selector: "lib-login-form", ngImport: i0, template: "<h4>login form source files</h4>\r\n\r\n<form #simpleForm=\"ngForm\" (ngSubmit)=\"getValues(simpleForm.value)\" >\r\n    <label>User name</label>\r\n   <input type=\"text\" ngModel name=\"user\" placeholder=\"Enter user name\">\r\n   <br><br>\r\n   <label>Age</label>\r\n   <input type=\"text\" ngModel name=\"age\" placeholder=\"Enter user age\">\r\n   <br><br>\r\n   <label>Address</label>\r\n   <input type=\"text\" ngModel name=\"address\" placeholder=\"Enter user address\">\r\n   <br><br>\r\n   <button> Submit</button>\r\n  </form>", styles: ["h4{color:#00f}\n"], dependencies: [{ kind: "directive", type: i1.ɵNgNoValidate, selector: "form:not([ngNoForm]):not([ngNativeValidate])" }, { kind: "directive", type: i1.DefaultValueAccessor, selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]" }, { kind: "directive", type: i1.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { kind: "directive", type: i1.NgControlStatusGroup, selector: "[formGroupName],[formArrayName],[ngModelGroup],[formGroup],form:not([ngNoForm]),[ngForm]" }, { kind: "directive", type: i1.NgModel, selector: "[ngModel]:not([formControlName]):not([formControl])", inputs: ["name", "disabled", "ngModel", "ngModelOptions"], outputs: ["ngModelChange"], exportAs: ["ngModel"] }, { kind: "directive", type: i1.NgForm, selector: "form:not([ngNoForm]):not([formGroup]),ng-form,[ngForm]", inputs: ["ngFormOptions"], outputs: ["ngSubmit"], exportAs: ["ngForm"] }] }); }
 }
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.1.3", ngImport: i0, type: LoginFormComponent, decorators: [{
             type: Component,
-            args: [{ selector: 'lib-login-form', template: "<h4>login form source files</h4>" }]
+            args: [{ selector: 'lib-login-form', template: "<h4>login form source files</h4>\r\n\r\n<form #simpleForm=\"ngForm\" (ngSubmit)=\"getValues(simpleForm.value)\" >\r\n    <label>User name</label>\r\n   <input type=\"text\" ngModel name=\"user\" placeholder=\"Enter user name\">\r\n   <br><br>\r\n   <label>Age</label>\r\n   <input type=\"text\" ngModel name=\"age\" placeholder=\"Enter user age\">\r\n   <br><br>\r\n   <label>Address</label>\r\n   <input type=\"text\" ngModel name=\"address\" placeholder=\"Enter user address\">\r\n   <br><br>\r\n   <button> Submit</button>\r\n  </form>", styles: ["h4{color:#00f}\n"] }]
         }] });
 
 class CompoLibComponent {
@@ -35,12 +40,11 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.1.3", ngImpor
   ` }]
         }] });
 
-// import { LoginFormComponent } from './login-form/login-form.component'; 
 class CompoLibModule {
     static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.1.3", ngImport: i0, type: CompoLibModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
     static { this.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.1.3", ngImport: i0, type: CompoLibModule, declarations: [CompoLibComponent,
-            LoginFormComponent], exports: [CompoLibComponent] }); }
-    static { this.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.1.3", ngImport: i0, type: CompoLibModule }); }
+            LoginFormComponent], imports: [FormsModule], exports: [CompoLibComponent] }); }
+    static { this.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.1.3", ngImport: i0, type: CompoLibModule, imports: [FormsModule] }); }
 }
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.1.3", ngImport: i0, type: CompoLibModule, decorators: [{
             type: NgModule,
@@ -49,7 +53,9 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.1.3", ngImpor
                         CompoLibComponent,
                         LoginFormComponent
                     ],
-                    imports: [],
+                    imports: [
+                        FormsModule
+                    ],
                     exports: [
                         CompoLibComponent
                     ],
