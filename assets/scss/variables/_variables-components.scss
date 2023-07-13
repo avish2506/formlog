@@ -1,0 +1,71 @@
+//  ================================================================================================
+//  ? TIP:  It is recommended to use this file for overriding component variables.
+//  ================================================================================================
+
+// Custom base primary colors
+:root {
+  --background-color: #f8f8f8;
+  --navigation: #fff;
+  --primary: #146a5d;
+  --checkbox-border: #146a5d;
+  --text-dark: #000;
+  --label-text: #146a5d;
+  --hover-text: #fff;
+  --bg-light: #fff;
+  --forms: #fff;
+  --nav-text: #696969;
+  --light-gray: #696969;
+  --material-icons: #146a5d;
+  --highlight-list: #e3f2fd;
+  --table-header: #f9f9f9;
+  --table-odd: #f7f7f7;
+  --table-border: #ddd;
+  --table-hover: #e8fdfa;
+  --btn: #146a5d;
+  --menu-panel: #002721;
+  --border-trans: transparent;
+  --btn-hover: #146a5d;
+  --btn-dark: #146a5d;
+  --dropdown-list: #fff;
+  --btncancel: #146a5d;
+  --primary-light: #65908a;
+  --primary-dark: #146a5d;
+  --light-d-light: #fff;
+  --ldl-text: #fff;
+  --light-d-accent: #fff;
+  --header-bg: #f7f7f7;
+  --secondary-color: #146a5d;
+  --menu-link: #65908a;
+  --menu-highlight: #146a5d;
+  --profile-bg: #f3f9f9;
+
+  --var-icon-font: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+
+  --rocket-icon: '/assets/images/rocket-ship.svg';
+  --base-font-size: 13px;
+  --font-11: 11px;
+  --font-12: 12px;
+  --font-13: 13px;
+  --font-14: 14px;
+  --font-15: 15px;
+  --font-16: 16px;
+  --font-17: 17px;
+  --font-18: 18px;
+  --font-19: 19px;
+  --font-20: 20px;
+  --font-21: 21px;
+  --font-24: 24px;
+}
+
+$base-font-size: 13px;
+$base-font-family: 'Open Sans', sans-serif !important;
+$base-color: #146a5d;
+$base-hover-color: #146a5d;
+$base-focus-color: #146a5d;
+
+$base-cancel: #212121;
+$base-bg-light: #431e8d12;
+
+$danger-color: #ff6252;
+$warning-color: #f0a141;
+$success-color: #2ecd53;
